@@ -5,24 +5,26 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Colby Sparks - Personal Website</title>
       <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/css/styles.css">
-      <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/me_gs.png"> <!-- Link to the favicon -->
+      <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/me_gs.png">
+      <!-- Link to the favicon -->
       <style>
          /* Add CSS styling for the image border */
          img {
-            border: 1px solid black; /* thin black border */
-            max-width: 193px; /* maximum width */
-            height: auto; /* maintain aspect ratio */
+         border: 1px solid black; /* thin black border */
+         max-width: 300px; /* maximum width */
+         height: auto; /* maintain aspect ratio */
          }
          /* Add CSS styling for the tooltip */
          [data-tooltip]:hover::after {
-            content: attr(data-tooltip); /* display tooltip text */
-            position: absolute;
-            background-color: black;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 14px;
-            white-space: nowrap;
+         content: attr(data-tooltip); /* display tooltip text */
+         position: absolute;
+         background-color: black;
+         color: white;
+         padding: 4px 8px;
+         border-radius: 4px;
+         font-size: 14px;
+         white-space: nowrap;
+         margin-left: 6px; /* Add margin between the link and the tooltip */
          }
       </style>
    </head>
@@ -32,8 +34,9 @@
          <p>Kentucky, USA</p>
       </header>
       <section>
-         <h2>About Me</h2>
-         <p>I perform Financial Operations in the Financial Services industry, leveraging SQL Server and Excel for Data Analysis and Reporting.<br>I graduated from Cornell University in 2022 with a BA in Mathematics and a minor in Business.</p>
+         <h2>About</h2>
+         <p>Financial operations in the financial services industry, leveraging SQL Server for data quality and reporting.<br>Graduated from Cornell in 2022 with a math degree.</p>
+         <p>interests: software, capital markets, minimalism, resource optimization.</p>
       </section>
       <section>
          <h2>Contact</h2>
@@ -43,6 +46,11 @@
       <footer>
          <p>&copy; 2024 Colby Sparks. All rights reserved.</p>
       </footer>
-      <img src="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/me_gs.png" alt="Colby Sparks in 2023." data-tooltip="Colby Sparks in 2023.">
+      <figure>
+         <img src="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/highway.jpg" alt="Colby Sparks in 2022." data-tooltip="Colby Sparks in 2022.">
+         <figcaption>
+            California State Route 1 (2022) 
+         </figcaption>
+      </figure>
    </body>
 </html>
