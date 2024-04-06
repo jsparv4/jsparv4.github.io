@@ -1,40 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colby Sparks - Personal Website</title>
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/me_gs.png">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1>Colby Sparks</h1>
-    <p>Lexington, KY</p>
-  </header>
-  <section>
-    <h2>About</h2>
-    <p>I work in the retirement services industry.</p>
-    <p>Interests: technology, finance, minimalism.</p>
-  </section>
-  <section>
-    <h2>Services</h2>
-    <p>I offer in-person and virtual tutoring services.</p>
-  </section>
-  <section>
-    <h2>Contact</h2>
-    <p><a href="mailto:jsparv4@outlook.com">Send an Email</a></p>
-    <p><a href="https://www.linkedin.com/in/wcs87">LinkedIn</a></p>
-  </section>
-
-  <figure>
-    <img src="https://raw.githubusercontent.com/jsparv4/jsparv4.github.io/main/assets/images/Bowling.jpg" alt="Picture of Colby Sparks" data-tooltip="December 2023." style="max-width: 20%;">
-    <figcaption>
-      Bowling in December 2023.
-    </figcaption>
-  </figure>
-  <footer>
-  <p>&copy; 2024 Colby Sparks. All rights reserved.</p>
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COLBY SPARKS</title>
+    <style>
+      body {
+        font-family: Georgia, serif; /* Specify Georgia as the preferred font, with fallback to generic serif */
+      }
+      .container {
+        text-align: center; /* Center-align the text */
+      }
+      .block-text {
+        display: inline-block; /* Display as inline-block to make it centered */
+        text-align: left; /* Left-align the text */
+        max-width: 600px; /* Set a maximum width for better readability */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="block-text">
+        <h1>Colby Sparks</h1>
+        <p>
+          American Trust Company, a subsidiary of EdgeCo Holdings, LP, based in
+          Lexington, KY, appointed me as a Financial Operations Specialist in
+          September 2023. In this role, I oversee billing operations for the
+          company's legacy blocks of business and handle quarterly revenue
+          reporting for retirement plans grouped by institution. Moreover, I
+          proficiently run ad hoc queries on the internal FIRSTRAC™ billing
+          database for quality assurance and reporting. Leveraging my expertise
+          in Python scripting, I automate input/output operations on numerous
+          files, enhancing efficiency in file management. Furthermore, I take
+          the lead in quality assurance efforts post-onboarding of retirement
+          plans, ensuring fee accuracy and compliance. Overall, my role involves
+          meticulous attention to detail, analytical problem-solving skills, and
+          a proactive approach to process optimization.
+        </p>
+        <footer>
+          Copyright &copy; <span id="year"></span> Colby Sparks. All rights
+          reserved.
+        </footer>
+        <script>
+          document.getElementById("year").textContent =
+            new Date().getFullYear();
+        </script>
+      </div>
+    </div>
+  </body>
 </html>
