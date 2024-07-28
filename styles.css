@@ -18,8 +18,8 @@
 }
 
 body {
-    font-family: Calibri, serif;
-    /* Specify Georgia as the preferred font, with fallback to generic serif */
+    font-family: Calibri, Arial, serif;
+    /* Specify Calibri as the preferred font, with fallback to Arial and then generic serif */
 }
 
 .container {
@@ -30,7 +30,7 @@ body {
 .block-text {
     display: inline-block;
     /* Display as inline-block to make it centered */
-    text-align: left;
+    text-align: center;
     /* Left-align the text */
     max-width: 600px;
     /* Set a maximum width for better readability */
