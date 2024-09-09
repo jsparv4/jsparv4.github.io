@@ -5,14 +5,14 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 16px; /* Slightly smaller font size for more content fit */
+    line-height: 1.5; /* Adjust line height to match font size */
 }
 
 header {
     background-color: #003366; /* Navy Blue */
     color: #fff;
-    padding: 1em;
+    padding: 0.75em; /* Reduced padding for a tighter header */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -20,45 +20,60 @@ header {
 .banner a {
     text-decoration: none;
     color: #fff;
-    margin: 0 20px;
+    margin: 0 10px; /* Reduced margin for header buttons */
     font-weight: bold;
-    transition: color 0.3s, text-shadow 0.3s;
-    font-size: 1.2em;
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    font-size: 1.1em; /* Slightly smaller font size */
+    padding: 4px 8px; /* Reduced padding */
+    border-radius: 4px;
 }
 
-.banner a:hover {
-    color: #e0e0e0;
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+.banner a:hover,
+.banner a:focus {
+    color: #003366; /* Navy Blue text on hover/focus */
+    background-color: #e0e0e0; /* Light grey background */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    outline: 2px solid #003366; /* Accessible focus outline */
+    outline-offset: 2px; /* Space between outline and button */
 }
 
 .container {
     max-width: 900px;
-    margin: 20px auto;
-    padding: 30px;
+    margin: 10px auto; /* Reduced margin for tighter container positioning */
+    padding: 20px; /* Reduced padding */
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure that footer does not overlap */
+    margin-bottom: 40px; /* Reduced margin for spacing from footer */
+}
+
+.container::after {
+    content: "";
+    display: block;
+    height: 20px; /* Reduced height for the space between content and footer */
+    background: #f0f0f0; /* Background color to match body */
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 20px; /* Reduced margin between sections */
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em; /* Slightly smaller font size */
     border-bottom: 2px solid #003366; /* Navy Blue */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    padding-bottom: 8px; /* Reduced padding */
+    margin-bottom: 10px; /* Reduced margin */
     color: #333;
 }
 
 p {
-    margin: 10px 0;
+    margin: 5px 0; /* Reduced margin for paragraphs */
 }
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 10px; /* Reduced padding */
     background-color: #003366; /* Navy Blue */
     color: #fff;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
@@ -70,13 +85,13 @@ footer {
 
 @media (max-width: 600px) {
     body {
-        font-size: 16px;
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
     .banner a {
-        font-size: 1em;
-        margin: 0 10px;
+        font-size: 1em; /* Keep font size consistent */
+        margin: 0 8px; /* Adjust margin for smaller screens */
     }
     h1 {
-        font-size: 2em;
+        font-size: 1.8em; /* Adjust font size for smaller screens */
     }
 }
