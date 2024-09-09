@@ -36,10 +36,16 @@
         </section>
     </div>
 <footer>
+<p>© <span id="year"></span> Colby Sparks. All rights reserved.</p>
     <script>
         const startYear = 2024;
         const currentYear = new Date().getFullYear();
-        document.getElementById('year').textContent = (currentYear > startYear ? ' - ${currentYear}' : '');
+        const yearSpan = document.getElementById('year');
+        if (currentYear > startYear) {
+            yearSpan.textContent = `${startYear} - ${currentYear}`;
+        } else {
+            yearSpan.textContent = startYear;
+        }
     </script>
 </footer>
 
