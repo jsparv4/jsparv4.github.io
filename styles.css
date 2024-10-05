@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #003366; /* Navy Blue */
+    background-color: #D2691E; /* Fall Orange */
     color: #fff;
     padding: 0.75em; /* Reduced padding for a tighter header */
     text-align: center;
@@ -30,7 +30,7 @@ header {
 
 .banner a:hover,
 .banner a:focus {
-    color: #003366; /* Navy Blue text on hover/focus */
+    color: #D2691E; /* Fall Orange */
     background-color: #e0e0e0; /* Light grey background */
     transform: scale(1.05); /* Slightly enlarge the button */
     outline: 2px solid #003366; /* Accessible focus outline */
@@ -61,7 +61,7 @@ section {
 
 h1 {
     font-size: 2em; /* Slightly smaller font size */
-    border-bottom: 2px solid #003366; /* Navy Blue */
+    border-bottom: 2px solid #D2691E; /* Fall Orange */
     padding-bottom: 8px; /* Reduced padding */
     margin-bottom: 10px; /* Reduced margin */
     color: #333;
@@ -74,13 +74,13 @@ p {
 footer {
     text-align: center;
     padding: 10px; /* Reduced padding */
-    background-color: #003366; /* Navy Blue */
+    background-color: #D2691E; /* Fall Orange */
     color: #fff;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 2px solid #001a33; /* Darker Navy Blue */
+    border-top: 2px solid #A0522D; /* Darker Fall Orange */
 }
 
 @media (max-width: 600px) {
