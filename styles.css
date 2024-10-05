@@ -9,34 +9,6 @@ body {
     line-height: 1.5; /* Adjust line height to match font size */
 }
 
-header {
-    background-color: #D2691E; /* Fall Orange */
-    color: #fff;
-    padding: 0.75em; /* Reduced padding for a tighter header */
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.banner a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 10px; /* Reduced margin for header buttons */
-    font-weight: bold;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
-    font-size: 1.1em; /* Slightly smaller font size */
-    padding: 4px 8px; /* Reduced padding */
-    border-radius: 4px;
-}
-
-.banner a:hover,
-.banner a:focus {
-    color: #D2691E; /* Fall Orange */
-    background-color: #e0e0e0; /* Light grey background */
-    transform: scale(1.05); /* Slightly enlarge the button */
-    outline: 2px solid #A0522D; /* Accessible focus outline */
-    outline-offset: 2px; /* Space between outline and button */
-}
-
 .container {
     max-width: 900px;
     margin: 10px auto; /* Reduced margin for tighter container positioning */
