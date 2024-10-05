@@ -33,7 +33,7 @@ header {
     color: #D2691E; /* Fall Orange */
     background-color: #e0e0e0; /* Light grey background */
     transform: scale(1.05); /* Slightly enlarge the button */
-    outline: 2px solid #003366; /* Accessible focus outline */
+    outline: 2px solid #A0522D; /* Accessible focus outline */
     outline-offset: 2px; /* Space between outline and button */
 }
 
