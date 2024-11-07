@@ -33,7 +33,7 @@ section {
 
 h1 {
     font-size: 2em; /* Slightly smaller font size */
-    border-bottom: 2px solid #D2691E; /* Fall Orange */
+    border-bottom: 2px solid #00A3A0; /* Turq */
     padding-bottom: 8px; /* Reduced padding */
     margin-bottom: 10px; /* Reduced margin */
     color: #333;
@@ -46,13 +46,13 @@ p {
 footer {
     text-align: center;
     padding: 10px; /* Reduced padding */
-    background-color: #D2691E; /* Fall Orange */
+    background-color: #00A3A0; /* Turq */
     color: #fff;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     bottom: 0;
-    border-top: 2px solid #A0522D; /* Darker Fall Orange */
+    border-top: 2px solid #008A87; /* Darker Turq */
 }
 
 @media (max-width: 600px) {
