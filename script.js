@@ -1,20 +1,8 @@
-function getLatLonFromUrl() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const lat = parseFloat(urlParams.get('lat'));
-    const lon = parseFloat(urlParams.get('lon'));
+async function fetchWeather() {
+    // Hard-coded latitude and longitude for Lexington, KY
+    const lat = 38.0396;
+    const lon = -84.546;
 
-    console.log("Extracted Latitude:", lat, "Longitude:", lon); // Debug log
-
-    if (isNaN(lat) || isNaN(lon)) {
-        console.error('Invalid latitude or longitude in URL');
-        document.getElementById('weather-info').textContent = 'Invalid location data.';
-        return null;
-    }
-    
-    return { lat, lon };
-}
-
-async function fetchWeather(lat, lon) {
     try {
         console.log("Fetching point data...");
         const pointResponse = await fetch(`https://api.weather.gov/points/${lat},${lon}`);
@@ -49,7 +37,7 @@ async function fetchWeather(lat, lon) {
         const temperatureUnit = forecastData.properties.periods[0].temperatureUnit;
 
         if (temperatureUnit === 'F') {
-            document.getElementById('weather-info').textContent = `${currentTemperature}°F`;
+            document.getElementById('weather-info').textContent = `LEX: ${currentTemperature}°F`;
         } else {
             document.getElementById('weather-info').textContent = 'Temperature not in Fahrenheit.';
         }
@@ -59,8 +47,5 @@ async function fetchWeather(lat, lon) {
     }
 }
 
-// Get latitude and longitude and call fetchWeather
-const coordinates = getLatLonFromUrl(); // Renamed variable to 'coordinates'
-if (coordinates) {
-    fetchWeather(coordinates.lat, coordinates.lon);
-}
+// Call the function to display Lexington weather
+fetchWeather();
