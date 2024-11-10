@@ -29,20 +29,7 @@
     </div>
 <footer>
     <p>© <span id="year"></span> Colby Sparks. All rights reserved.</p>
-    <script>
-        // Define the start year
-        const startYear = 2024;
-        // Get the current year
-        const currentYear = new Date().getFullYear();
-        // Get the span element where the year will be displayed
-        const yearSpan = document.getElementById('year');
-        // Update the span content based on the current year
-        if (currentYear > startYear) {
-            yearSpan.textContent = `${startYear} - ${currentYear}`;
-        } else {
-            yearSpan.textContent = startYear;
-        }
-    </script>
+    <p id="weather-info"><span class="spinner"></span> Loading weather data...</p>
 </footer>
     <script src="script.js"></script>
 </body>
