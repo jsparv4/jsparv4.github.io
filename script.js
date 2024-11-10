@@ -1,9 +1,3 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    setYear();
-    initializeWeather();
-});
-
 async function fetchWeather(lat, lon) {
     try {
         const pointResponse = await fetch(`https://api.weather.gov/points/${lat},${lon}`);
