@@ -59,8 +59,8 @@ async function fetchWeather(lat, lon) {
     }
 }
 
-// Call the function after extracting lat and lon
-const location = getLatLonFromUrl();
-if (location) {
-    fetchWeather(location.lat, location.lon);
+// Get latitude and longitude and call fetchWeather
+const coords = getLatLonFromUrl(); // Renamed variable to 'coords'
+if (coords) {
+    fetchWeather(coords.lat, coords.lon);
 }
