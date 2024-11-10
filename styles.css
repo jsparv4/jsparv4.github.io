@@ -68,25 +68,14 @@ footer {
     }
 }
 
-.spinner {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #ccc;
-    border-radius: 50%;
-    border-top-color: #fff;
-    animation: spin 1s linear infinite;
-    margin-right: 5px;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Add some styling for the weather information */
+/* Basic styling for the weather info text */
 #weather-info {
-    margin-top: 5px;
-    font-size: 0.9em; /* Smaller font to integrate with footer */
+    margin-top: 5px; /* Space between the weather info and other footer content */
+    font-size: 0.9em; /* Slightly smaller font to blend with the footer */
+    color: #fff; /* Match the footer text color */
+}
+
+/* Optional hover effect for weather info */
+#weather-info:hover {
+    color: #e0f7f6; /* Slightly lighter color for a subtle hover effect */
 }
