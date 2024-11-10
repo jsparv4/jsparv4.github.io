@@ -1,3 +1,17 @@
+function getLatLonFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const lat = parseFloat(urlParams.get('lat'));
+    const lon = parseFloat(urlParams.get('lon'));
+
+    if (isNaN(lat) || isNaN(lon)) {
+        console.error('Invalid latitude or longitude in URL');
+        document.getElementById('weather-info').textContent = 'Invalid location data.';
+        return null;
+    }
+    
+    return { lat, lon };
+}
+
 async function fetchWeather(lat, lon) {
     try {
         const pointResponse = await fetch(`https://api.weather.gov/points/${lat},${lon}`);
@@ -21,19 +35,23 @@ async function fetchWeather(lat, lon) {
             throw new Error('Unexpected forecast data structure');
         }
 
-        const currentWeather = forecastData.properties.periods[0];
-        const weatherElement = document.getElementById('weather-info');
-        if (weatherElement) {
-            weatherElement.textContent =
-                `Weather: ${currentWeather.temperature}°${currentWeather.temperatureUnit}, ${currentWeather.shortForecast}`;
+        const currentTemperature = forecastData.properties.periods[0].temperature;
+        const temperatureUnit = forecastData.properties.periods[0].temperatureUnit;
+
+        // Display temperature in Fahrenheit only
+        if (temperatureUnit === 'F') {
+            document.getElementById('weather-info').textContent = `${currentTemperature}°F`;
         } else {
-            console.error('Weather info element not found in the document.');
+            document.getElementById('weather-info').textContent = 'Temperature not in Fahrenheit.';
         }
     } catch (error) {
         console.error('Error fetching weather data:', error);
-        const weatherElement = document.getElementById('weather-info');
-        if (weatherElement) {
-            weatherElement.textContent = 'Failed to load weather data.';
-        }
+        document.getElementById('weather-info').textContent = 'Failed to load temperature.';
     }
+}
+
+// Get latitude and longitude from the URL and call fetchWeather
+const location = getLatLonFromUrl();
+if (location) {
+    fetchWeather(location.lat, location.lon);
 }
