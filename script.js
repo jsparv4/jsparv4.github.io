@@ -60,7 +60,7 @@ async function fetchWeather(lat, lon) {
 }
 
 // Get latitude and longitude and call fetchWeather
-const coords = getLatLonFromUrl(); // Renamed variable to 'coords'
-if (coords) {
-    fetchWeather(coords.lat, coords.lon);
+const coordinates = getLatLonFromUrl(); // Renamed variable to 'coordinates'
+if (coordinates) {
+    fetchWeather(coordinates.lat, coordinates.lon);
 }
