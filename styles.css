@@ -1,81 +1,29 @@
-/* styles.css */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
-    font-size: 16px; /* Slightly smaller font size for more content fit */
-    line-height: 1.5; /* Adjust line height to match font size */
+    background-color: #f7f7f7; /* Light background for readability */
 }
 
 .container {
-    max-width: 900px;
-    margin: 10px auto; /* Reduced margin for tighter container positioning */
-    padding: 20px; /* Reduced padding */
-    background-color: #fff;
-    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for sections */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* Ensure that footer does not overlap */
-    margin-bottom: 40px; /* Reduced margin for spacing from footer */
-}
-
-.container::after {
-    content: "";
-    display: block;
-    height: 20px; /* Reduced height for the space between content and footer */
-    background: #f0f0f0; /* Background color to match body */
-}
-
-section {
-    margin-bottom: 20px; /* Reduced margin between sections */
-}
-
-h1 {
-    font-size: 2em; /* Slightly smaller font size */
-    border-bottom: 2px solid #00A3A0; /* Turq */
-    padding-bottom: 8px; /* Reduced padding */
-    margin-bottom: 10px; /* Reduced margin */
-    color: #333;
-}
-
-p {
-    margin: 5px 0; /* Reduced margin for paragraphs */
+    border-radius: 10px;
 }
 
 footer {
     text-align: center;
-    padding: 10px; /* Reduced padding */
-    background-color: #00A3A0; /* Turq */
-    color: #fff;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    border-top: 2px solid #008A87; /* Darker Turq */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
 }
 
-@media (max-width: 600px) {
-    body {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-    .banner a {
-        font-size: 1em; /* Keep font size consistent */
-        margin: 0 8px; /* Adjust margin for smaller screens */
-    }
-    h1 {
-        font-size: 1.8em; /* Adjust font size for smaller screens */
-    }
-}
-
-/* Basic styling for the weather info text */
 #weather-info {
-    margin-top: 5px; /* Space between the weather info and other footer content */
-    font-size: 0.9em; /* Slightly smaller font to blend with the footer */
-    color: #fff; /* Match the footer text color */
-}
-
-/* Optional hover effect for weather info */
-#weather-info:hover {
-    color: #e0f7f6; /* Slightly lighter color for a subtle hover effect */
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #ffcc00; /* Highlight color for weather data */
 }
