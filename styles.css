@@ -67,3 +67,26 @@ footer {
         font-size: 1.8em; /* Adjust font size for smaller screens */
     }
 }
+
+.spinner {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s linear infinite;
+    margin-right: 5px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add some styling for the weather information */
+#weather-info {
+    margin-top: 5px;
+    font-size: 0.9em; /* Smaller font to integrate with footer */
+}
