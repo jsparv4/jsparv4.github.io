@@ -47,5 +47,8 @@ async function fetchWeather() {
     }
 }
 
-// Call the function to display Lexington weather
+// Call the function initially
 fetchWeather();
+
+// Schedule the function to run once every hour (3600000 milliseconds)
+setInterval(fetchWeather, 3600000);
