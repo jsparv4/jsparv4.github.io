@@ -1,37 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Colby Sparks - Financial Operations Specialist. Expertise in billing, reporting, SQL.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Colby Sparks - Financial Operations Specialist. Expertise in billing, reporting, SQL."
+    />
     <title>Colby Sparks</title>
     <link rel="icon" href="c.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="container">
-        <section id="home">
-        </section>
-        <section id="about">
-            <h1>About Me</h1>
-            <p>2+ years of experience working in Financial Services.</p> 
-            <p>Core: Business Systems, Financial Analysis, SQL Server, PowerShell, Python.</p>
-            <p>M.S., Computer Science '25 - Eastern Kentucky University (EKU)</p>
-            <p>B.A., Mathematics '22 - Cornell University (A&S)</p>
-        </section>
-        <section id="contact">
-            <h1>Contact</h1>
-            <p>Email: jsparv4 [at] outlook [dot] com</p>
-        </section>
+      <section id="home"></section>
+      <section id="about">
+        <h1>Colby Sparks - About Me</h1>
+        <p>
+          2+ YOE, Financial Services. Experiences include two cross-functional
+          roles, integrating billing operations with accounting, finance, and IT
+          functions.
+        </p>
+        <p>Location: Central KY</p>
+        <p>
+          Core: Business Systems, Financial Analysis, SQL Server, PowerShell,
+          Python.
+        </p>
+        <p>M.S., Computer Science '25 - Eastern Kentucky University</p>
+        <p>B.A., Mathematics '22 - Cornell University</p>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <p>Email: jsparv4 [at] outlook [dot] com</p>
+      </section>
     </div>
     <footer>
-        <p>© <span id="year"></span> Colby Sparks. All rights reserved.</p>
-        <p id="weather-info">Loading weather data...</p>
+      <p>© <span id="year"></span> Colby Sparks. All rights reserved.</p>
+      <p id="weather-info">Loading weather data...</p>
+      <p>
+        Weather API:
+        <a
+          href="https://open-meteo.com/"
+          class="white-link"
+          target="_blank"
+          rel="noopener noreferrer"
+          >open-mateo</a
+        >
+      </p>
     </footer>
     <script src="script.js"></script>
     <script>
-        // Update the year automatically
-        document.getElementById('year').textContent = new Date().getFullYear();
+      // Update the year automatically
+      document.getElementById("year").textContent = new Date().getFullYear()
     </script>
-</body>
+  </body>
 </html>
