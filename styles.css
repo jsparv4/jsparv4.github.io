@@ -9,10 +9,11 @@ body {
   flex-direction: column; /* Stack elements vertically */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  min-height: 100vh; /* Full viewport height */
+  height: 100vh; /* Full viewport height (replacing min-height) */
   text-align: center; /* Center text by default */
   font-size: 1.5rem; /* Larger font size */
   line-height: 1.6; /* Comfortable line height for paragraphs */
+  overflow: hidden; /* Hide scrollbars */
 }
 
 /* Accessible Container */
@@ -40,6 +41,7 @@ footer {
   text-align: center; /* Center text in the footer */
 }
 
+/* Link Styles */
 .white-link {
   color: white; /* Set link color to white */
   text-decoration: none; /* Remove underline, optional */
