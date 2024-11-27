@@ -9,7 +9,7 @@ const apiUrl =
 fetch(apiUrl)
   .then((response) => {
     if (!response.ok) {
-      throw new Error(HTTP error! Status: ${response.status});
+      throw new Error(`HTTP error! Status: ${response.status}`); // Use backticks for template literal
     }
     return response.json();
   })
@@ -22,7 +22,7 @@ fetch(apiUrl)
     const weatherDescription = getWeatherDescription(weatherCode);
 
     // Display the temperature and description
-    weatherInfoElement.textContent = Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription};
+    weatherInfoElement.textContent = `Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription}`; // Use backticks for template literal
   })
   .catch((error) => {
     // Show an error message if the fetch fails
@@ -63,4 +63,4 @@ function getWeatherDescription(code) {
     99: "Thunderstorm with heavy hail",
   };
   return weatherDescriptions[code] || "Unknown weather condition";
-} 
+}
