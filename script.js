@@ -1,34 +1,34 @@
 // Select the weather information element
-const weatherInfoElement = document.getElementById("weather-info")
+const weatherInfoElement = document.getElementById("weather-info");
 
-// Open-Meteo API URL
+// Open-Meteo API URL with new endpoint
 const apiUrl =
-  "https://api.open-meteo.com/v1/forecast?latitude=38.04&longitude=-84.55&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York"
+  "https://api.open-meteo.com/v1/forecast?latitude=37.9887&longitude=-84.4777&current=temperature_2m&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit";
 
 // Fetch weather data from the API
 fetch(apiUrl)
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`)
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    return response.json()
+    return response.json();
   })
   .then((data) => {
     // Get the temperature and weather code for the current hour
-    const temperature = data.hourly.temperature_2m[0]
-    const weatherCode = data.hourly.weather_code[0]
+    const temperature = data.hourly.temperature_2m[0];
+    const weatherCode = data.hourly.weather_code[0];
 
     // Map the weather code to a description
-    const weatherDescription = getWeatherDescription(weatherCode)
+    const weatherDescription = getWeatherDescription(weatherCode);
 
     // Display the temperature and description
-    weatherInfoElement.textContent = `Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription}`
+    weatherInfoElement.textContent = `Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription}`;
   })
   .catch((error) => {
     // Show an error message if the fetch fails
-    weatherInfoElement.textContent = "Unable to load weather data."
-    console.error("Error fetching weather data:", error)
-  })
+    weatherInfoElement.textContent = "Unable to load weather data.";
+    console.error("Error fetching weather data:", error);
+  });
 
 // Function to convert weather codes into descriptions
 function getWeatherDescription(code) {
@@ -61,6 +61,6 @@ function getWeatherDescription(code) {
     95: "Thunderstorm",
     96: "Thunderstorm with light hail",
     99: "Thunderstorm with heavy hail",
-  }
-  return weatherDescriptions[code] || "Unknown weather condition"
+  };
+  return weatherDescriptions[code] || "Unknown weather condition";
 }
