@@ -21,7 +21,7 @@ fetch(apiUrl)
         const weatherDescription = getWeatherDescription(weatherCode);
 
         // Display the temperature and description
-        weatherInfoElement.textContent = `Current Weather: ${temperature}°F, ${weatherDescription}`;
+        weatherInfoElement.textContent = `Current Weather (Lexington, KY): ${temperature}°F, ${weatherDescription}`;
     })
     .catch(error => {
         // Show an error message if the fetch fails
