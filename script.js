@@ -3,7 +3,7 @@ const weatherInfoElement = document.getElementById("weather-info");
 
 // Open-Meteo API URL with new endpoint
 const apiUrl =
-  "https://api.open-meteo.com/v1/forecast?latitude=37.9887&longitude=-84.4777&current=temperature_2m&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit";
+  "https://open-meteo.com/en/docs#latitude=37.9887&longitude=-84.4777&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1";
 
 // Fetch weather data from the API
 fetch(apiUrl)
