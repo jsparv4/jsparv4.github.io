@@ -1,28 +1,29 @@
 // Select the weather information element
 const weatherInfoElement = document.getElementById("weather-info");
 
-// Open-Meteo API URL with new endpoint
+// Open-Meteo API URL with correct endpoint
 const apiUrl =
-  "https://open-meteo.com/en/docs#latitude=37.9887&longitude=-84.4777&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=1";
+  "https://api.open-meteo.com/v1/forecast?latitude=37.9887&longitude=-84.4777&hourly=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America/New_York&forecast_days=1";
 
 // Fetch weather data from the API
 fetch(apiUrl)
   .then((response) => {
     if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`); // Use backticks for template literal
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
     return response.json();
   })
   .then((data) => {
     // Get the temperature and weather code for the current hour
-    const temperature = Math.round(data.hourly.temperature_2m[0]);
-    const weatherCode = data.hourly.weather_code[0];
+    const currentHour = new Date().getHours();
+    const temperature = Math.round(data.hourly.temperature_2m[currentHour]);
+    const weatherCode = data.hourly.weather_code[currentHour];
 
     // Map the weather code to a description
     const weatherDescription = getWeatherDescription(weatherCode);
 
     // Display the temperature and description
-    weatherInfoElement.textContent = `Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription}`; // Use backticks for template literal
+    weatherInfoElement.textContent = `Current Weather in Lexington, KY: ${temperature}°F, ${weatherDescription}`;
   })
   .catch((error) => {
     // Show an error message if the fetch fails
