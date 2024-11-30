@@ -18,6 +18,7 @@ body {
 
 /* Accessible Container */
 .container {
+  width: 90%; /* Adjust width dynamically based on screen size */
   max-width: 800px; /* Set a maximum width for layout consistency */
   margin: auto;
   padding: 20px;
@@ -26,11 +27,9 @@ body {
   border-radius: 12px; /* Slightly rounded corners */
   border: 1px solid #e0e0e0; /* Gentle border for structure */
   text-align: left; /* Align text to left for readability */
-  width: auto; /* Allow width to adjust dynamically */
-  min-height: auto; /* Default height adjustment */
 }
 
-/* Accessible Footer */
+/* Footer Styles */
 footer {
   margin-top: 20px; /* Space above the footer */
   padding: 15px;
@@ -44,10 +43,49 @@ footer {
 /* Link Styles */
 .white-link {
   color: white; /* Set link color to white */
-  text-decoration: none; /* Remove underline, optional */
+  text-decoration: none; /* Remove underline */
 }
 
 .white-link:hover {
-  text-decoration: underline; /* Add underline on hover, optional */
+  text-decoration: underline; /* Add underline on hover */
   color: #cccccc; /* Optional hover color for better visibility */
+}
+
+/* Loading Spinner */
+#loader {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  animation: spin 1s linear infinite; /* Spinner animation */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 600px) {
+  body {
+    font-size: 1.2rem; /* Slightly smaller text on small screens */
+    padding: 10px; /* Reduce padding for compact view */
+  }
+
+  .container {
+    padding: 15px; /* Adjust inner padding for smaller devices */
+    border-radius: 8px; /* Slightly smaller rounding for compact design */
+  }
+
+  footer {
+    font-size: 0.9rem; /* Slightly smaller footer text */
+  }
+}
+
+/* Transitions for Smooth Updates */
+.container {
+  transition: all 0.3s ease-in-out;
 }
