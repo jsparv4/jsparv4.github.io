@@ -3,29 +3,26 @@ body {
   font-family: "Calibri", "Arial", sans-serif; /* Updated to Calibri */
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Soft neutral background */
-  color: #333333; /* High contrast for readability */
-  display: flex; /* Flexbox for centering */
+  background-color: #e6f7ff; /* Soft wintery blue */
+  color: #2b2b2b; /* Dark text for readability */
+  display: flex; /* Flexbox for layout */
   flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
-  height: 100vh; /* Full viewport height (replacing min-height) */
   text-align: center; /* Center text by default */
   font-size: 1.5rem; /* Larger font size */
   line-height: 1.6; /* Comfortable line height for paragraphs */
-  overflow: hidden; /* Hide scrollbars */
 }
 
 /* Accessible Container */
 .container {
   width: 90%; /* Adjust width dynamically based on screen size */
   max-width: 800px; /* Set a maximum width for layout consistency */
-  margin: auto;
+  margin: 20px auto; /* Add margin for spacing */
   padding: 20px;
   background-color: #ffffff; /* White background for content */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border-radius: 12px; /* Slightly rounded corners */
-  border: 1px solid #e0e0e0; /* Gentle border for structure */
+  border: 1px solid #d9ecf2; /* Light border for a soft winter theme */
   text-align: left; /* Align text to left for readability */
 }
 
@@ -33,7 +30,7 @@ body {
 footer {
   margin-top: 20px; /* Space above the footer */
   padding: 15px;
-  background-color: #333333; /* High contrast dark background */
+  background-color: #005f73; /* Deep winter teal */
   color: #ffffff; /* White text for readability */
   font-size: 1rem; /* Ensure text remains legible */
   width: 100%; /* Footer spans the full width */
@@ -48,7 +45,7 @@ footer {
 
 .white-link:hover {
   text-decoration: underline; /* Add underline on hover */
-  color: #cccccc; /* Optional hover color for better visibility */
+  color: #bbd0da; /* Optional hover color for better visibility */
 }
 
 /* Loading Spinner */
