@@ -3,54 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Colby Sparks - Financial Operations Specialist. Expertise in billing, reporting, SQL."
-    />
+    <meta name="description" content="Colby Sparks - Financial Operations Specialist" />
     <title>Colby Sparks</title>
     <link rel="icon" href="c.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container">
-      <section id="home"></section>
+    <main class="container">
       <section id="about">
         <h1>Colby Sparks</h1>
-        <p>
-          Two years of experience in the financial services industry.
-          Experiences include two cross-functional roles, integrating billing
-          processes with accounting, finance, operations and software development functions.
-        </p>
-        <p>Location: Lexington, KY</p>
-        <p>
-          Core: Business Systems, Financial Reporting, SQL, Programming, Shell
-        </p>
-        <p>M.S., Computer Science - Eastern Kentucky University</p>
-        <p>B.A., Mathematics - Cornell University</p>
+        
+        <!-- Using accessible bullet points list with descriptive content -->
+        <ul id="about-list">
+          <li>Financial Operations Specialist with experience in billing operations, custom financial reporting and analysis, SQL, and more. Based in Lexington, KY (LOCAL).</li>
+          <li>M.S. in Computer Science (Expected 2025) from Eastern Kentucky University</li>
+          <li>B.A. in Mathematics (2022) from Cornell University</li>
+        </ul>
       </section>
       <section id="contact">
-        <h1>Contact</h1>
-        <p>Email: jsparv4 [at] outlook [dot] com</p>
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:jsparv4@outlook.com">jsparv4@outlook.com</a></p> <!-- Making email clickable -->
+        <a href="https://github.com/jsparv4" target="_blank" rel="noopener noreferrer">
+          <img id="github-icon" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo" />
+        </a>
       </section>
-    </div>
+    </main>
     <footer>
-      <p>© <span id="year"></span> Colby Sparks. All rights reserved.</p>
-      <p id="weather-info">Loading weather data...</p>
-      <p>
-        Weather API:
-        <a
-          href="https://open-meteo.com/"
-          class="white-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          >open-mateo</a
-        >
-      </p>
+      <p>© Colby Sparks</p> <!-- Removed the unnecessary rights reserved statement -->
     </footer>
     <script src="script.js"></script>
-    <script>
-      // Update the year automatically
-      document.getElementById("year").textContent = new Date().getFullYear()
-    </script>
   </body>
 </html>
