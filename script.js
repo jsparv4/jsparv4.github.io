@@ -40,3 +40,6 @@ function resetIcon() {
 // Add event listeners
 githubIcon.addEventListener("mouseenter", softenLogo); // When hovering over the image
 githubIcon.addEventListener("mouseleave", resetIcon);   // When hover ends
+
+// Get the current year and set it in the span with id 'copyright-year'
+document.getElementById('copyright-year').textContent = new Date().getFullYear();
