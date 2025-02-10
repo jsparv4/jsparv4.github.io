@@ -51,7 +51,7 @@ body {
   border-radius: 12px; /* More rounded corners */
   padding: 20px; /* Increased padding for visual comfort */
   display: inline-block;
-  font-size: 1.4rem; /* Increased font size for content */
+  font-size: 1rem; /* Increased font size for content */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); /* Stronger shadow */
 }
 
