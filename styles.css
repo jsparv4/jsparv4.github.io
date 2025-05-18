@@ -1,0 +1,56 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Section styling */
+section {
+    margin-bottom: 20px;
+}
+
+/* About section */
+#about h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+#about-list {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* Weather section */
+.weather-container {
+    padding: 10px;
+    background-color: #e3e3e3;
+    border-radius: 5px;
+}
+
+/* Contact section */
+#contact a {
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
