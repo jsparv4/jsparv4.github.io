@@ -3,7 +3,7 @@ document.getElementById('copyright-year').textContent = new Date().getFullYear()
 
 // Fetch weather data from Open-Meteo API
 function fetchWeather() {
-    // Define the location for weather data to be Garden Springs area in Lexington, KY
+    // Define the location for weather data
     const latitude = 38.0370;
     const longitude = -84.5379;
     const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&temperature_unit=fahrenheit`;
